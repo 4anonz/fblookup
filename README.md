@@ -50,8 +50,18 @@ pkg install openssl-tool
 git clone https://github.com/4anonz/fblookup.git
 cd fblookup
 gcc fblookup.c -o fblookup -lws2_32 -lssl -lcrypto
-./fblookup
+./fblookup 
 ```
+# help
+```
+Usage: fblookup [email/username/id/number] [wordlist] <OPTIONAL>[--debug]
+Positional arguments:\n"
+ email           This is the victim's email or facebook user name or id or mobile number
+ wordlist        This must be a file that contains passwords one per line
+OPTIONAL:
+ --debug         This is a feature which allows a you to save all the login logs in a file
+                 This is the HTTP response headers received from the facebook saver.
+ ``` 
 # Author Contact
 * [Contact](https://www.facebook.com/digitl.guru.1) - Anonymous Hacks
 * feedback is always welcome.
