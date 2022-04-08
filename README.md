@@ -1,3 +1,7 @@
+#Notice
+fblookup doesn't work anymore, however we're currently working on updating it.
+The tool must be updated once in a while since the Facebook servers are always up to date.
+
 # fblookup
 fblookup is a facebook password cracking tool written in C which allows you to hack every facebook account using a wordlist without any block from facebook firewall.
 fblookup is a multi-platform tool, it can run on most of the unix-based OS like kali linux, macOS. it also works well windows OS and termux on android.
